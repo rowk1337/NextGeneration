@@ -1,5 +1,3 @@
-import os
-
 import discord
 import asyncio
 import datetime
@@ -325,4 +323,4 @@ async def on_message(message):
         embedbot.set_footer(text="Santarém RP",icon_url="https://cdn.discordapp.com/attachments/496411425770700810/506062830878064640/Santarem_RP_Logo.png")
         await client.send_message(message.channel, embed=embedbot)
 
-client.run(os.getenv('TOKEN'))﻿
+client.run(os.getenv('TOKEN'))
