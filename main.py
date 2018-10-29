@@ -22,7 +22,7 @@ async def on_ready():
 
 @client.event
 async def on_member_join(member):
-    nomeDoCargo ="👨🏼‍💼 CIVIL"
+    nomeDoCargo ="👷 Civil 👷"
     cargo = discord.utils.get(member.server.roles, name=nomeDoCargo)
     await client.add_roles(member, cargo)
     if member.server.id == '506203112424603649':
@@ -34,7 +34,7 @@ async def on_member_join(member):
         await client.send_message(canal, embed=welcomemb)
     if member.server.id == '506203112424603649':
         welcomemb = discord.Embed(color=0xF2EA00, title="Bem-Vindo ao nosso servidor de discord!",
-                                  description="***IP***: 37.189.193.10:30120 \n"
+                                  description="***IP***: EM BREVE \n"
                                   "***Não esqueças de ler as regras antes de entrares no nosso servidor.*** \n"
                                   "__Diverte-te {}!__".format(member.mention))
         welcomemb.set_image(
@@ -316,26 +316,37 @@ async def on_message(message):
         embedbot.set_footer(text="Next Generation RP",icon_url="https://cdn.discordapp.com/avatars/430457464949964800/b793d694b3927329b4f4b4564ec87a81.webp?size=1024")
         await client.send_message(message.channel, embed=embedbot)
 
-#    if message.content.startswith('!candidatarparamecanico'):
-#       Embed = discord.Embed(color=0xFFA500, description='**📬 Faça o formulário para DJ na sua `DM`!**')
-#        await message.channel.send(embed=Embed)
-#        await message.author.send('** `Qual é o teu nome?`**'.format(message.author.mention))
-#        nome = await message.author.wait_for_message()
-#        await message.author.send('**🗣 `Que Idade tens?`**'.format(message.author.mention))
-#        idade = await message.author.wait_for_message()
-#        await message.author.send('**📆 `Quanto tempo tens diariamente para jogar no servidor?`**'.format(message.author.mention))
-#        tempo = await message.author.wait_for_message()
-#        await message.author.send('**🌎 `O que entendes pelo emprego Mecânico?`**'.format(message.author.mention))
-#        mecanico = await message.author.wait_for_message()
-#        await message.author.send('**📠 `Conheces bem as regras do servidor? !`**'.format(message.author.mention))
-#        regras = await message.author.wait_for_message()
-#        await message.author.send('**🔊 `Há quanto tempo jogas no servidor?`**'.format(message.author.mention))
-#        tempo2 = await message.author.wait_for_message()
-#        await message.authort.send('**🔔 `Qual é a tua experiência em roleplay? Dá-nos também um exemplo de Roleplay entre duas pessoas, dentro deste emprego, utilizando os comandos /me?"`**'.format(message.author.mention))
-#        experienca = await message.author.wait_for_message()
-#        await message.author.send('**📠 `Seu formulário foi enviado! [digite  ok]`**'.format(message.author.mention))
-#        terminado = await message.author.wait_for_message()
-#        if message.channel == client.get_channel("506221775970107393"):
-#            await client.send_message(message, nome, idade, tempo, mecanico, regras, tempo2, experienca, terminado)
+    if message.content.startswith('!candidatarparamecanico'):
+       Embed = discord.Embed(color=0xFFA500, description='**📬 Faça o formulário para DJ na sua `DM`!**')
+        await message.channel.send(embed=Embed)
+        await message.author.send('** `Qual é o teu nome?`**'.format(message.author.mention))
+        nome = await message.author.wait_for_message()
+        await message.author.send('**🗣 `Que Idade tens?`**'.format(message.author.mention))
+        idade = await message.author.wait_for_message()
+        await message.author.send('**📆 `Quanto tempo tens diariamente para jogar no servidor?`**'.format(message.author.mention))
+        tempo = await message.author.wait_for_message()
+        await message.author.send('**🌎 `O que entendes pelo emprego Mecânico?`**'.format(message.author.mention))
+        mecanico = await message.author.wait_for_message()
+        await message.author.send('**📠 `Conheces bem as regras do servidor? !`**'.format(message.author.mention))
+        regras = await message.author.wait_for_message()
+        await message.author.send('**🔊 `Há quanto tempo jogas no servidor?`**'.format(message.author.mention))
+        tempo2 = await message.author.wait_for_message()
+        await message.authort.send('**🔔 `Qual é a tua experiência em roleplay? Dá-nos também um exemplo de Roleplay entre duas pessoas, dentro deste emprego, utilizando os comandos /me?"`**'.format(message.author.mention))
+        experienca = await message.author.wait_for_message()
+        await message.author.send('**📠 `Queres dizer mais alguma merda filho da puta?`**'.format(message.author.mention))
+        terminado = await message.author.wait_for_message()
+        canal = client.get_channel('506223594624385024')
+        embed = discord.Embed(colour=0xF0000,
+                              description="O usuário : {} acabou de se candidatar para Mecanico FODASE GANDA MECANICO!".format(message.author.mention))
+        embed.add_field(name='Nome:', value=nome.content)
+        embed.add_field(name='Idade:', value=idade.content)
+        embed.add_field(name='Tempo diario:', value=tempo.content)
+        embed.add_field(name='Oque o usuario entende pelo emprego mecanico:', value=mecanico.content)
+        embed.add_field(name='Ele conheçe as regras:', value=regras.content)
+        embed.add_field(name='Há quanto tempo ele joga:', value=tempo2.content)
+        embed.add_field(name='Se o rapaz tem experiença em roleplay:', value=experienca.content)
+        embed.add_field(name='Outros:', value=terminado.content)
+        
+        await client.send_message(canal, embed=embed)
         
 client.run(os.getenv('TOKEN'))
