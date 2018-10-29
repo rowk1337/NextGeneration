@@ -346,7 +346,6 @@ async def on_message(message):
         embed.add_field(name='Há quanto tempo ele joga:', value=tempo2.content)
         embed.add_field(name='Se o rapaz tem experiença em roleplay:', value=experienca.content)
         embed.add_field(name='Outros:', value=terminado.content)
-        
         await client.send_message(canal, embed=embed)
         
 client.run(os.getenv('TOKEN'))
