@@ -317,7 +317,7 @@ async def on_message(message):
         await client.send_message(message.channel, embed=embedbot)
 
     if message.content.startswith('!candidatarparamecanico'):
-       Embed = discord.Embed(color=0xFFA500, description='**📬 Faça o formulário para DJ na sua `DM`!**')
+        Embed = discord.Embed(color=0xFFA500, description='**📬 Faça o formulario para mecanico no `privado`!**')
         await message.channel.send(embed=Embed)
         await message.author.send('** `Qual é o teu nome?`**'.format(message.author.mention))
         nome = await message.author.wait_for_message()
