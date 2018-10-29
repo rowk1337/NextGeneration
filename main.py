@@ -25,14 +25,14 @@ async def on_member_join(member):
     nomeDoCargo ="👨🏼‍💼 CIVIL"
     cargo = discord.utils.get(member.server.roles, name=nomeDoCargo)
     await client.add_roles(member, cargo)
-    if member.server.id == '496092965039636501':
+    if member.server.id == '506203112424603649':
         welcomemb = discord.Embed(color=0xF2EA00, title="Seja bem-vindo ao servidor! Por favor leia as regras!",
                               description="{}, regras: <#496388429136003092> ".format(member.mention))
-        canal = client.get_channel("496383786259316756")
+        canal = client.get_channel("506218818016772106")
         welcomemb.set_image(url="https://media1.tenor.com/images/ea9df861113fecec5bb17bf1faa0124e/tenor.gif?itemid=3950966")
         welcomemb.set_footer(icon_url=member.avatar_url, text=member.name)
         await client.send_message(canal, embed=welcomemb)
-    if member.server.id == '496092965039636501':
+    if member.server.id == '506203112424603649':
         welcomemb = discord.Embed(color=0xF2EA00, title="Bem-Vindo ao nosso servidor de discord!",
                                   description="***IP***: 37.189.193.10:30120 \n"
                                   "***Não esqueças de ler as regras antes de entrares no nosso servidor.*** \n"
@@ -67,11 +67,11 @@ async def on_message(message):
         embed.add_field(name="Região:", value=str(message.server.region).title(), inline=True)
         await client.send_message(message.channel, embed=embed)
 
-    if message.channel == client.get_channel("496388250030833665"):
+    if message.channel == client.get_channel("506218952356265994"):
         await client.add_reaction(message, "👍")
         await client.add_reaction(message, "👎")
 
-    if message.channel == client.get_channel("496384696784125952"):
+    if message.channel == client.get_channel("506218253820100630"):
         await client.add_reaction(message, "✅")
         await client.add_reaction(message, "❌")
 
@@ -160,13 +160,13 @@ async def on_message(message):
         embed = discord.Embed(color=0x00ff00, title="Staff do servidor.",
                                                 description="A Staff Do nosso servidor.\n\n"
                                                             "__***Fundadores:***__\n"
-                                                            "Sleepy / rowk1337 / ETERNITY\n\n"
+                                                            "Tenho de mudar mas já sabem que o rowk1337 é staff putos\n\n"
                                                             "__***Co-Fundador:***__\n"
-                                                            "Ezrael / TSUBASA / 20COMER / ClouDdy\n\n"
+                                                            "Tenho de mudar\n\n"
                                                             "__***Configurador:***__\n"
-                                                            "TroN\n\n"
+                                                            "Tenho de mudar\n\n"
                                                             "__***Moderador:***__\n"
-                                                            "Ninguem no momento\n\n")
+                                                            "Tenho de mudar\n\n")
         embed.set_thumbnail(url=message.server.icon_url)
         embed.set_footer(icon_url="https://cdn.discordapp.com/avatars/385029583696691211/2b465b31ca58fb4cb9b853a2ab6b9406.png?size=128",text="rowk1337#8223")
         await client.send_message(message.channel, embed=embed)
@@ -214,13 +214,6 @@ async def on_message(message):
         ping_embed.set_footer(text="Comando enviado por {}".format(message.author),
                          icon_url="https://images-ext-1.discordapp.net/external/BCKxPNzZzEVfkbIublv7_3wG2016jTwGk3onTemVRnM/%3Fv%3D1/https/cdn.discordapp.com/emojis/450112878108999680.gif")
         await client.send_message(message.channel, embed=ping_embed)
-
-    if message.content.startswith("!formulario"):
-        embed = discord.Embed(color=0xFFDF00, title="Formulário para entrares na Whitelist.",
-                                                description="https://docs.google.com/forms/d/1oAS93KsS4GfaUXB06i3K8U34SRvuBj82fLsgStO3BFE.")
-        embed.set_thumbnail(url=message.server.icon_url)
-        embed.set_footer(icon_url="https://cdn.discordapp.com/avatars/385029583696691211/2b465b31ca58fb4cb9b853a2ab6b9406.png?size=128",text="rowk1337#8223")
-        await client.send_message(message.channel, embed=embed)
 
     if message.content.startswith("!avatar"):
         cor = 0x7f0000
@@ -311,16 +304,38 @@ async def on_message(message):
         embedbot.add_field(name='30€', value="5.500.000€ no servidor + 2 vehículos da concessionaria", inline=False)
         embedbot.add_field(name='40€', value="7.000.000€ no servidor + 1 casa a escolha + 2 vehículos da concessionaria \n( ou 7.000.000€ + 1 carro exclusivo + uma casa )", inline=False)
         embedbot.add_field(name='50€', value="10.000.000€ no servidor + 2 vehículos da concessionaria + vehículo exclusivo + 2 casas", inline=False)
-        embedbot.add_field(name="\n\n Para mais informações:", value="Falar com o `sleepy. ♡#6175`", inline=False)
-        embedbot.set_footer(text="Santarém RP",icon_url="https://cdn.discordapp.com/attachments/496411425770700810/506062830878064640/Santarem_RP_Logo.png")
+        embedbot.add_field(name="\n\n Para mais informações:", value="Falar com o `no lo se`", inline=False)
+        embedbot.set_footer(text="Next Generation RP",icon_url="https://cdn.discordapp.com/avatars/430457464949964800/b793d694b3927329b4f4b4564ec87a81.webp?size=1024")
         await client.send_message(message.channel, embed=embedbot)
 
     if message.content.lower().startswith('!metodos'):
         await client.delete_message(message)
         embedbot = discord.Embed(title='**Métodos de pagamento**',color=0xa4dce7, description='\n')
-        embedbot.add_field(name='Lista:', value="Paypal \n PaySafeCard \n Contas ( Steam, Fortnite, LoL ( falar com o `rowk1337#8223`  ou então com o `sleepy. ♡#6175`)", inline=False)
+        embedbot.add_field(name='Lista:', value="Paypal \n PaySafeCard \n`)", inline=False)
         embedbot.set_thumbnail(url=message.server.icon_url)
-        embedbot.set_footer(text="Santarém RP",icon_url="https://cdn.discordapp.com/attachments/496411425770700810/506062830878064640/Santarem_RP_Logo.png")
+        embedbot.set_footer(text="Next Generation RP",icon_url="https://cdn.discordapp.com/avatars/430457464949964800/b793d694b3927329b4f4b4564ec87a81.webp?size=1024")
         await client.send_message(message.channel, embed=embedbot)
 
+#    if message.content.startswith('!candidatarparamecanico'):
+#       Embed = discord.Embed(color=0xFFA500, description='**📬 Faça o formulário para DJ na sua `DM`!**')
+#        await message.channel.send(embed=Embed)
+#        await message.author.send('** `Qual é o teu nome?`**'.format(message.author.mention))
+#        nome = await message.author.wait_for_message()
+#        await message.author.send('**🗣 `Que Idade tens?`**'.format(message.author.mention))
+#        idade = await message.author.wait_for_message()
+#        await message.author.send('**📆 `Quanto tempo tens diariamente para jogar no servidor?`**'.format(message.author.mention))
+#        tempo = await message.author.wait_for_message()
+#        await message.author.send('**🌎 `O que entendes pelo emprego Mecânico?`**'.format(message.author.mention))
+#        mecanico = await message.author.wait_for_message()
+#        await message.author.send('**📠 `Conheces bem as regras do servidor? !`**'.format(message.author.mention))
+#        regras = await message.author.wait_for_message()
+#        await message.author.send('**🔊 `Há quanto tempo jogas no servidor?`**'.format(message.author.mention))
+#        tempo2 = await message.author.wait_for_message()
+#        await message.authort.send('**🔔 `Qual é a tua experiência em roleplay? Dá-nos também um exemplo de Roleplay entre duas pessoas, dentro deste emprego, utilizando os comandos /me?"`**'.format(message.author.mention))
+#        experienca = await message.author.wait_for_message()
+#        await message.author.send('**📠 `Seu formulário foi enviado! [digite  ok]`**'.format(message.author.mention))
+#        terminado = await message.author.wait_for_message()
+#        if message.channel == client.get_channel("506221775970107393"):
+#            await client.send_message(message, nome, idade, tempo, mecanico, regras, tempo2, experienca, terminado)
+        
 client.run(os.getenv('TOKEN'))
