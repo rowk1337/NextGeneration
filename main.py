@@ -333,7 +333,10 @@ async def on_message(message):
         embedbot.set_footer(text="Next Generation RP",
                             icon_url="https://cdn.discordapp.com/avatars/430457464949964800/b793d694b3927329b4f4b4564ec87a81.webp?size=1024")
         await client.send_message(message.channel, embed=embedbot)
-
+    
+    if message.content.startswith(client.user.mention):
+        await client.send_message(message.channel, "Tavas melhor em baixo de água")
+    
     if message.content.startswith('candidatar-me para mecanico'):
         Embed = discord.Embed(color=0xFFA500, description='**📬 Faça o formulario para mecanico no `privado`!**')
         await client.send_message(message.channel, embed=Embed)
@@ -375,6 +378,7 @@ async def on_message(message):
 
         global msg_user
         msg_user = message.author
+   
 
     @client.event
     async def on_reaction_add(reaction, user):
