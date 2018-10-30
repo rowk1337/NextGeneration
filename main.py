@@ -334,29 +334,38 @@ async def on_message(message):
         embedbot.set_footer(text="Next Generation RP",
                             icon_url="https://cdn.discordapp.com/avatars/430457464949964800/b793d694b3927329b4f4b4564ec87a81.webp?size=1024")
         await client.send_message(message.channel, embed=embedbot)
-    
+
     if message.content.startswith(client.user.mention):
         await client.send_message(message.channel, "Tavas melhor em baixo de água")
-    
+
     if message.content.startswith('candidatar-me para mecanico'):
         Embed = discord.Embed(color=0xFFA500, description='**📬 Faça o formulario para mecanico no `privado`!**')
         await client.send_message(message.channel, embed=Embed)
         await client.send_message(message.author, '** `Qual é o teu nome?`**'.format(message.author.mention))
         nome = await client.wait_for_message(author=message.author)
-        await client.send_message(message.author, '**🗣 `Que Idade tens ( OOC = Fora de Personagem basicamente na vida real )?`**'.format(message.author.mention))
+        await client.send_message(message.author,
+                                  '**🗣 `Que Idade tens ( OOC = Fora de Personagem basicamente na vida real )?`**'.format(
+                                      message.author.mention))
         idade = await client.wait_for_message(author=message.author)
-        await client.send_message(message.author, '**📆 `Quanto tempo tens diariamente para jogar no servidor?`**'.format(message.author.mention))
+        await client.send_message(message.author,
+                                  '**📆 `Quanto tempo tens diariamente para jogar no servidor?`**'.format(
+                                      message.author.mention))
         tempo = await client.wait_for_message(author=message.author)
-        await client.send_message(message.author,'**🌎 `O que entendes pelo emprego Mecânico?`**'.format(message.author.mention))
+        await client.send_message(message.author,
+                                  '**🌎 `O que entendes pelo emprego Mecânico?`**'.format(message.author.mention))
         mecanico = await client.wait_for_message(author=message.author)
-        await client.send_message(message.author, '**📠 `Conheces bem as regras do servidor? !`**'.format(message.author.mention))
+        await client.send_message(message.author,
+                                  '**📠 `Conheces bem as regras do servidor? !`**'.format(message.author.mention))
         regras = await client.wait_for_message(author=message.author)
-        await client.send_message(message.author, '**🔊 `Há quanto tempo jogas no servidor?`**'.format(message.author.mention))
+        await client.send_message(message.author,
+                                  '**🔊 `Há quanto tempo jogas no servidor?`**'.format(message.author.mention))
         tempo2 = await client.wait_for_message(author=message.author)
-        await client.send_message(message.author, '**🔔 `Qual é a tua experiência em roleplay? Dá-nos também um exemplo de Roleplay entre duas pessoas, dentro deste emprego, utilizando os comandos /me?"`**'.format(
-                message.author.mention))
+        await client.send_message(message.author,
+                                  '**🔔 `Qual é a tua experiência em roleplay? Dá-nos também um exemplo de Roleplay entre duas pessoas, dentro deste emprego, utilizando os comandos /me?"`**'.format(
+                                      message.author.mention))
         experienca = await client.wait_for_message(author=message.author)
-        await client.send_message(message.author, '**📠 `Queres dizer mais alguma coisa?`**'.format(message.author.mention))
+        await client.send_message(message.author,
+                                  '**📠 `Queres dizer mais alguma coisa?`**'.format(message.author.mention))
         terminado = await client.wait_for_message(author=message.author)
         canal = client.get_channel('506564649060401162')
         embed = discord.Embed(colour=0xF0000,
@@ -368,8 +377,10 @@ async def on_message(message):
         embed.add_field(name='O que o usuario entende pelo emprego mecanico:', value=mecanico.content, inline=False)
         embed.add_field(name='Se ele conheçe bem as regras:', value=regras.content, inline=False)
         embed.add_field(name='Há quanto tempo ele joga:', value=tempo2.content, inline=False)
-        embed.add_field(name='Experiência em RolePlay, e um exemplo de RolePlay entre 2 pessoas:', value=experienca.content, inline=False)
-        embed.add_field(name='Outros ( caso ele queira dizer mais alguma coisa):', value=terminado.content, inline=False)
+        embed.add_field(name='Experiência em RolePlay, e um exemplo de RolePlay entre 2 pessoas:',
+                        value=experienca.content, inline=False)
+        embed.add_field(name='Outros ( caso ele queira dizer mais alguma coisa):', value=terminado.content,
+                        inline=False)
         candidatura = await client.send_message(canal, embed=embed)
         await client.add_reaction(candidatura, "✅")
         await client.add_reaction(candidatura, "❌")
@@ -379,20 +390,19 @@ async def on_message(message):
 
         global msg_user
         msg_user = message.author
-        
+
     if message.content.lower().startswith("!ascii"):
         await client.delete_message(message)
         if not message.author.server_permissions.administrator:
             await client.send_message(message.channel, "Você não tem permissão para executar este comando. :smile:")
             return
         try:
-            f = Figlet(font='small')
+            f = Figlet(font='big')
             mensagem = message.content.lower().replace("!ascii", "")
             texto = f.renderText(mensagem)
-            await client.send_message(message.channel, "`{}`".format(texto))
+            await client.send_message(message.channel, "```{}```".format(texto))
         except:
             pass
- 
 
     @client.event
     async def on_reaction_add(reaction, user):
@@ -406,16 +416,15 @@ async def on_message(message):
 
 @client.event
 async def on_message_delete(message):
-    fmt = '**{0.author.name}** deletou uma messagem :\n{0.content}'
+    fmt = '`{0.author.name} deletou uma messagem `:\n{0.content}'
     channel = client.get_channel("506789371006156801")
     await client.send_message(channel, fmt.format(message))
 
 
 @client.event
 async def on_message_edit(before, after):
-    fmt = '**{0.author}** editou a sua messagem :\n{1.content}'
+    fmt = '`{0.author} editou a sua messagem `:\n{1.content}'
     channel = client.get_channel("506789371006156801")
     await client.send_message(channel, fmt.format(after, before))
-
         
 client.run(os.getenv('TOKEN'))
