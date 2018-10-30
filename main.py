@@ -380,7 +380,7 @@ async def on_message(message):
         global msg_user
         msg_user = message.author
         
-    if message.content.lower().startswith(".ascii"):
+    if message.content.lower().startswith("!ascii"):
         await client.delete_message(message)
         if not message.author.server_permissions.administrator:
             await client.send_message(message.channel, "Você não tem permissão para executar este comando. :smile:")
