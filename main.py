@@ -386,7 +386,7 @@ async def on_message(message):
             return
         if message.author.server_permissions.administrator:
             try:
-         f = Figlet(font='epic')
+         f = Figlet(font='slant')
          mensagem = message.content.lower().replace(".ascii", "")
          texto = f.renderText(mensagem)
          await client.send_message(message.channel, "`{}`".format(texto))
