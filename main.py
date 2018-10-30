@@ -4,6 +4,7 @@ import datetime
 import time
 import os
 import psutil as psutil
+from pyfiglet import Figlet
 
 client = discord.Client()
 msg_id = None
@@ -386,7 +387,7 @@ async def on_message(message):
             return
         if message.author.server_permissions.administrator:
             try:
-         f = Figlet(font='slant')
+         f = Figlet(font='epic')
          mensagem = message.content.lower().replace(".ascii", "")
          texto = f.renderText(mensagem)
          await client.send_message(message.channel, "`{}`".format(texto))
