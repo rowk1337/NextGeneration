@@ -388,7 +388,7 @@ async def on_message(message):
 
 @client.event
 async def on_message_delete(message):
-    fmt = '{0.author.name} **deletou uma messagem ** :\n{0.content}'
+    fmt = '**{0.author.name}** deletou uma messagem :\n{0.content}'
     channel = client.get_channel("506789371006156801")
     await client.send_message(channel, fmt.format(message))
 
