@@ -386,8 +386,8 @@ async def on_message(message):
             await client.send_message(message.channel, "Você não tem permissão para executar este comando. :smile:")
             return
         try:
-            f = Figlet(font='slant')
-            mensagem = message.content.lower().replace(".ascii", "")
+            f = Figlet(font='epic')
+            mensagem = message.content.lower().replace("!ascii", "")
             texto = f.renderText(mensagem)
             await client.send_message(message.channel, "`{}`".format(texto))
         except:
