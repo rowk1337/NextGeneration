@@ -378,7 +378,21 @@ async def on_message(message):
 
         global msg_user
         msg_user = message.author
-   
+        
+    if message.content.lower().startswith(".ascii"):
+        await client.delete_message(message)
+        if not message.author.server_permissions.administrator:
+            await client.send_message(message.channel, "Você não tem permissão para executar este comando. :smile:")
+            return
+        if message.author.server_permissions.administrator:
+            try:
+         f = Figlet(font='epic')
+         mensagem = message.content.lower().replace(".ascii", "")
+         texto = f.renderText(mensagem)
+         await client.send_message(message.channel, "`{}`".format(texto))
+            except:
+                pass
+ 
 
     @client.event
     async def on_reaction_add(reaction, user):
