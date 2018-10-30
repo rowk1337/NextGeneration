@@ -427,4 +427,5 @@ async def on_message(message):
 #    channel = client.get_channel("506789371006156801")
 #    await client.send_message(channel, fmt.format(after, before))
 #        
-#client.run(os.getenv('TOKEN'))
+
+client.run(os.getenv('TOKEN'))
