@@ -348,7 +348,7 @@ async def on_message(message):
         embed.add_field(name='Outros:', value=terminado.content)
         await client.send_message(canal, embed=embed)
         
- @client.event
+@client.event
 async def on_message_delete(message):
     client.get_channel("506789371006156801")
     fmt = '{0.author.name} **deletou uma messagem ** :\n{0.content}'
