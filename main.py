@@ -414,17 +414,17 @@ async def on_message(message):
             print("add")
 
 
-@client.event
-async def on_message_delete(message):
-    fmt = '`{0.author.name} deletou uma messagem `:\n{0.content}'
-    channel = client.get_channel("506789371006156801")
-    await client.send_message(channel, fmt.format(message))
+#@client.event
+#async def on_message_delete(message):
+#    fmt = '`{0.author.name} deletou uma messagem `:\n{0.content}'
+#    channel = client.get_channel("506789371006156801")
+#    await client.send_message(channel, fmt.format(message))
 
 
-@client.event
-async def on_message_edit(before, after):
-    fmt = '`{0.author} editou a sua messagem `:\n{1.content}'
-    channel = client.get_channel("506789371006156801")
-    await client.send_message(channel, fmt.format(after, before))
-        
-client.run(os.getenv('TOKEN'))
+#@client.event
+#async def on_message_edit(before, after):
+#    fmt = '`{0.author} editou a sua messagem `:\n{1.content}'
+#    channel = client.get_channel("506789371006156801")
+#    await client.send_message(channel, fmt.format(after, before))
+#        
+#client.run(os.getenv('TOKEN'))
