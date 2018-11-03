@@ -405,10 +405,6 @@ async def on_message(message):
             await client.send_message(message.channel, "```{}```".format(texto))
         except:
             pass
-        
-    if message.content.lower().startswith(await client.get_user_info("<@359020686439743498>").mention")
-        marques = "`Sinceramente caga nem fales para esse gajo, ele é paneleiro e não volto a avisar...`"
-        await client.send_message(message.channel, marques)
 
     @client.event
     async def on_reaction_add(reaction, user):
