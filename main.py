@@ -401,10 +401,6 @@ async def on_message(message):
         shox = "Esse gajo é um empresário do caralho se quiseres falar com ele tem de ser sobre negócios ou ele vai te ignorar!"
         await client.send_message(message.channel, shox)
 
-    if message.content.lower().startswith("quem manda aqui?"):
-        rowk = "O <@385029583696691211> filhos da mãe"
-        await client.send_message(message.channel, rowk)
-
 
     if message.content.lower().startswith("!ascii"):
         await client.delete_message(message)
