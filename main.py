@@ -170,13 +170,15 @@ async def on_message(message):
         embed = discord.Embed(color=0x00ff00, title="Staff do servidor.",
                               description="A Staff Do nosso servidor.\n\n"
                                           "__***Fundadores:***__\n"
-                                          "Tenho de mudar mas já sabem que o rowk1337 é staff putos\n\n"
+                                          "rowk1337 | Marques | Circ7_ | Sleepy\n\n"
                                           "__***Co-Fundador:***__\n"
-                                          "Tenho de mudar\n\n"
-                                          "__***Configurador:***__\n"
-                                          "Tenho de mudar\n\n"
+                                          "20COMER | 🔥╲⎝⧹Morango⧸⎠╱🔥\n\n"
+                                          "__***Configuradores:***__\n"
+                                          "🔥╲⎝⧹Morango⧸⎠╱🔥 | devve | gamerpt_123 | Orb1x\n\n"
+                                          "__***Administradores:***__\n"
+                                          "sh0Xz | Stalker | Guga | pяx 🔥 | Major Pereira"
                                           "__***Moderador:***__\n"
-                                          "Tenho de mudar\n\n")
+                                          "AllHexN | GoKuBoy\n\n")
         embed.set_thumbnail(url=message.server.icon_url)
         embed.set_footer(
             icon_url="https://cdn.discordapp.com/avatars/385029583696691211/2b465b31ca58fb4cb9b853a2ab6b9406.png?size=128",
@@ -323,7 +325,7 @@ async def on_message(message):
                            inline=False)
         embedbot.add_field(name="\n\n Para mais informações:", value="Falar com um dos Fundadores!", inline=False)
         embedbot.set_footer(text="Next Generation RP",
-                            icon_url="https://cdn.discordapp.com/avatars/430457464949964800/b793d694b3927329b4f4b4564ec87a81.webp?size=1024")
+                            icon_url="https://cdn.discordapp.com/attachments/506224896691404820/508098898909462528/Logo.png")
         await client.send_message(message.channel, embed=embedbot)
 
     if message.content.lower().startswith('!metodos'):
@@ -332,7 +334,7 @@ async def on_message(message):
         embedbot.add_field(name='Lista:', value="`Paypal \n Skins de CS:GO \n PaySafeCard \n`", inline=False)
         embedbot.set_thumbnail(url=message.server.icon_url)
         embedbot.set_footer(text="Next Generation RP",
-                            icon_url="https://cdn.discordapp.com/avatars/430457464949964800/b793d694b3927329b4f4b4564ec87a81.webp?size=1024")
+                            icon_url="https://cdn.discordapp.com/attachments/506224896691404820/508098898909462528/Logo.png")
         await client.send_message(message.channel, embed=embedbot)
 
     if message.content.startswith(client.user.mention):
