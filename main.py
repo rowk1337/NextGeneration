@@ -101,7 +101,7 @@ async def on_message(message):
 
     if message.content.startswith("!ip"):
         await client.send_message(message.channel, "***__IP DO NOSSO SERVIDOR DE FIVEM__***:\n"
-                                                   "37.189.193.10:30120")
+                                                   "207.180.216.207")
 
     if message.content.startswith("!donators"):
         embed = discord.Embed(color=0xFFDF00, title="TOP DONATORS",
@@ -321,7 +321,7 @@ async def on_message(message):
         embedbot.add_field(name='50€',
                            value="10.000.000€ no servidor + 2 vehículos da concessionaria + vehículo exclusivo + 2 casas",
                            inline=False)
-        embedbot.add_field(name="\n\n Para mais informações:", value="Falar com o `no lo se`", inline=False)
+        embedbot.add_field(name="\n\n Para mais informações:", value="Falar com um dos Fundadores!", inline=False)
         embedbot.set_footer(text="Next Generation RP",
                             icon_url="https://cdn.discordapp.com/avatars/430457464949964800/b793d694b3927329b4f4b4564ec87a81.webp?size=1024")
         await client.send_message(message.channel, embed=embedbot)
@@ -329,7 +329,7 @@ async def on_message(message):
     if message.content.lower().startswith('!metodos'):
         await client.delete_message(message)
         embedbot = discord.Embed(title='**Métodos de pagamento**', color=0xa4dce7, description='\n')
-        embedbot.add_field(name='Lista:', value="Paypal \n PaySafeCard \n`)", inline=False)
+        embedbot.add_field(name='Lista:', value="Paypal \n Skins de CS:GO \n PaySafeCard \n`)", inline=False)
         embedbot.set_thumbnail(url=message.server.icon_url)
         embedbot.set_footer(text="Next Generation RP",
                             icon_url="https://cdn.discordapp.com/avatars/430457464949964800/b793d694b3927329b4f4b4564ec87a81.webp?size=1024")
