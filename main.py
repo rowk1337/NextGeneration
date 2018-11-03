@@ -329,7 +329,7 @@ async def on_message(message):
     if message.content.lower().startswith('!metodos'):
         await client.delete_message(message)
         embedbot = discord.Embed(title='**Métodos de pagamento**', color=0xa4dce7, description='\n')
-        embedbot.add_field(name='Lista:', value="Paypal \n Skins de CS:GO \n PaySafeCard \n`)", inline=False)
+        embedbot.add_field(name='Lista:', value="`Paypal \n Skins de CS:GO \n PaySafeCard \n`", inline=False)
         embedbot.set_thumbnail(url=message.server.icon_url)
         embedbot.set_footer(text="Next Generation RP",
                             icon_url="https://cdn.discordapp.com/avatars/430457464949964800/b793d694b3927329b4f4b4564ec87a81.webp?size=1024")
