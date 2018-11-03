@@ -38,7 +38,7 @@ async def on_member_join(member):
         await client.send_message(canal, embed=welcomemb)
     if member.server.id == '506203112424603649':
         welcomemb = discord.Embed(color=0xF2EA00, title="Bem-Vindo ao nosso servidor de discord!",
-                                  description="***IP***: EM BREVE \n"
+                                  description="***IP***:  62.210.119.193 \n"
                                               "***Não esqueças de ler as regras antes de entrares no nosso servidor.*** \n"
                                               "__Diverte-te {}!__".format(member.mention))
         welcomemb.set_image(
@@ -101,7 +101,7 @@ async def on_message(message):
 
     if message.content.startswith("!ip"):
         await client.send_message(message.channel, "***__IP DO NOSSO SERVIDOR DE FIVEM__***:\n"
-                                                   "207.180.216.207")
+                                                   "62.210.119.193")
 
     if message.content.startswith("!donators"):
         embed = discord.Embed(color=0xFFDF00, title="TOP DONATORS",
