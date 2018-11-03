@@ -176,7 +176,7 @@ async def on_message(message):
                                           "__***Configuradores:***__\n"
                                           "🔥╲⎝⧹Morango⧸⎠╱🔥 | devve | gamerpt_123 | Orb1x\n\n"
                                           "__***Administradores:***__\n"
-                                          "sh0Xz | Stalker | Guga | pяx 🔥 | Major Pereira"
+                                          "sh0Xz | Stalker | Guga | pяx 🔥 | Major Pereira\n\n"
                                           "__***Moderador:***__\n"
                                           "AllHexN | GoKuBoy\n\n")
         embed.set_thumbnail(url=message.server.icon_url)
