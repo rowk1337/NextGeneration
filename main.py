@@ -337,7 +337,7 @@ async def on_message(message):
                             icon_url="https://cdn.discordapp.com/attachments/506224896691404820/508098898909462528/Logo.png")
         await client.send_message(message.channel, embed=embedbot)
 
-    if message.content.startswith(user.mention("<@359020686439743498>")):
+    if message.content.startswith(client.user.mention)):
         await client.send_message(message.channel, "Tavas melhor em baixo de água")
 
     if message.content.startswith('candidatar-me para mecanico'):
@@ -406,7 +406,7 @@ async def on_message(message):
         except:
             pass
         
-    if message.content.lower().startswith("<@359020686439743498>")
+    if message.content.lower().startswith(await client.get_user_info("<@359020686439743498>").mention")
         marques = "`Sinceramente caga nem fales para esse gajo, ele é paneleiro e não volto a avisar...`"
         await client.send_message(message.channel, marques)
 
