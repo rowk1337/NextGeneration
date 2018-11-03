@@ -30,7 +30,7 @@ async def on_member_join(member):
     await client.add_roles(member, cargo)
     if member.server.id == '506203112424603649':
         welcomemb = discord.Embed(color=0xF2EA00, title="Seja bem-vindo ao servidor! Por favor leia as regras!",
-                                  description="{}, regras: <#496388429136003092> ".format(member.mention))
+                                  description="{}, regras: <#506216997047238658> ".format(member.mention))
         canal = client.get_channel("506218818016772106")
         welcomemb.set_image(
             url="https://media1.tenor.com/images/ea9df861113fecec5bb17bf1faa0124e/tenor.gif?itemid=3950966")
@@ -393,6 +393,19 @@ async def on_message(message):
         global msg_user
         msg_user = message.author
 
+    if message.content.lower().startswith("<@359020686439743498>"):
+        marques = "Vou ser sincero, nem me fales desse gajo é um fofinho do caraças!"
+        await client.send_message(message.channel, marques)
+
+    if message.content.lower().startswith("<@261820616766783488>"):
+        shox = "Esse gajo é um empresário do caralho se quiseres falar com ele tem de ser sobre negócios ou ele vai te ignorar!"
+        await client.send_message(message.channel, shox)
+
+    if message.content.lower().startswith("quem manda aqui?"):
+        rowk = "O <@385029583696691211> filhos da mãe"
+        await client.send_message(message.channel, rowk)
+
+
     if message.content.lower().startswith("!ascii"):
         await client.delete_message(message)
         if not message.author.server_permissions.administrator:
@@ -428,6 +441,6 @@ async def on_message(message):
 #    fmt = '`{0.author} editou a sua messagem `:\n{1.content}'
 #    channel = client.get_channel("506789371006156801")
 #    await client.send_message(channel, fmt.format(after, before))
-#        
+#  
 
 client.run(os.getenv('TOKEN'))
