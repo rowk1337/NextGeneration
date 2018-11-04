@@ -101,7 +101,7 @@ async def on_message(message):
 
     if message.content.startswith("!ip"):
         await client.send_message(message.channel, "***__IP DO NOSSO SERVIDOR DE FIVEM__***:\n"
-                                                   "62.210.119.193")
+                                                   "159.89.5.238")
 
     if message.content.startswith("!donators"):
         embed = discord.Embed(color=0xFFDF00, title="TOP DONATORS",
@@ -196,7 +196,7 @@ async def on_message(message):
 
     if message.content.startswith("!comandos"):
         helpemb = discord.Embed(
-            title="**Olá, sou o bot do servidor do Santarém RP!** \n \n",
+            title="**Olá, sou o bot do servidor do Next Generation RP!** \n \n",
             color=0x088A08,
             description='***COMANDOS:*** \n \n'
                         '``Informações`` \n \n'
