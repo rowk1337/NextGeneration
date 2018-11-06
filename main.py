@@ -107,9 +107,9 @@ async def on_message(message):
         embed = discord.Embed(color=0xFFDF00, title="TOP DONATORS",
                               description="Lista dos doadores que nos ajudaram.")
         embed.set_thumbnail(url=message.server.icon_url)
-        embed.add_field(name="👑 - `Miguel#0864*#2223`", value="50€", inline=False)
-        embed.add_field(name="2 - `GOD sh0Xz*#2223`", value="40€", inline=False)
-        embed.add_field(name="3 - `YvaneOficial#7966`", value="20€", inline=False)
+        embed.add_field(name="👑 - `@Miguel#0864`", value="50€", inline=False)
+        embed.add_field(name="2 - `@GOD sh0Xz*#2223`", value="40€", inline=False)
+        embed.add_field(name="3 - `@YvaneOficial#7966`", value="20€", inline=False)
         embed.add_field(name="3 - `@TM#3356`", value="20€", inline=False)
         embed.add_field(name="3 - `@Kelson#0984`", value="20€", inline=False)
         embed.add_field(name="4 - `@Guga#3108`", value="10€", inline=False)
