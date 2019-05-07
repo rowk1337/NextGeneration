@@ -173,7 +173,7 @@ async def on_message(message):
                                           "rowkzao | RedcepP#8728\n\n"
                                           "__***Administradores:***__\n"
                                           "KonigaN#5948 | leandroflorencio#5141 | rowk1337#8223 | \n\n"
-        embed.set_thumbnail(url=message.server.icon_url)
+        embed.set_thumbnail(url=author.avatar_url)
         embed.set_footer(
             icon_url="https://cdn.discordapp.com/attachments/575010844161867777/575418704125231131/Lusitanologo.png",
             text="rowk1337#8223")
