@@ -208,7 +208,7 @@ async def on_message(message):
                         ':x: !deletar \n \n')
         helpemb.set_image(url="https://media.giphy.com/media/39vn1E4p7XGCUWacSl/giphy.gif")
         embed.set_footer(
-            icon_url="https://cdn.discordapp.com/avatars/385029583696691211/2b465b31ca58fb4cb9b853a2ab6b9406.png?size=128",
+            icon_url="https://cdn.discordapp.com/attachments/575010844161867777/575418704125231131/Lusitanologo.png",
             text="rowk1337#8223")
         await client.send_message(message.author, embed=helpemb)
 
