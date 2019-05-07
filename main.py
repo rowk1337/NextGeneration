@@ -28,7 +28,7 @@ async def on_member_join(member):
     nomeDoCargo = "👷 Civil 👷"
     cargo = discord.utils.get(member.server.roles, name=nomeDoCargo)
     await client.add_roles(member, cargo)
-    if member.server.id == '506203112424603649':
+    if member.server.id == '574644501751267328':
         welcomemb = discord.Embed(color=0xF2EA00, title="Seja bem-vindo ao servidor! Por favor leia as regras!",
                                   description="{}, regras: <#506216997047238658> ".format(member.mention))
         canal = client.get_channel("506218818016772106")
@@ -36,9 +36,9 @@ async def on_member_join(member):
             url="https://media1.tenor.com/images/ea9df861113fecec5bb17bf1faa0124e/tenor.gif?itemid=3950966")
         welcomemb.set_footer(icon_url=member.avatar_url, text=member.name)
         await client.send_message(canal, embed=welcomemb)
-    if member.server.id == '506203112424603649':
+    if member.server.id == '574625800402239514':
         welcomemb = discord.Embed(color=0xF2EA00, title="Bem-Vindo ao nosso servidor de discord!",
-                                  description="***IP***:  62.210.119.193 \n"
+                                  description="***IP***:  ---- \n"
                                               "***Não esqueças de ler as regras antes de entrares no nosso servidor.*** \n"
                                               "__Diverte-te {}!__".format(member.mention))
         welcomemb.set_image(
@@ -74,11 +74,11 @@ async def on_message(message):
         embed.add_field(name="Região:", value=str(message.server.region).title(), inline=True)
         await client.send_message(message.channel, embed=embed)
 
-    if message.channel == client.get_channel("506218952356265994"):
+    if message.channel == client.get_channel("574647538661982234"):
         await client.add_reaction(message, "👍")
         await client.add_reaction(message, "👎")
 
-    if message.channel == client.get_channel("506218253820100630"):
+    if message.channel == client.get_channel("574646188196757534"):
         await client.add_reaction(message, "✅")
         await client.add_reaction(message, "❌")
 
@@ -101,18 +101,15 @@ async def on_message(message):
 
     if message.content.startswith("!ip"):
         await client.send_message(message.channel, "***__IP DO NOSSO SERVIDOR DE FIVEM__***:\n"
-                                                   "159.89.5.238")
+                                                   "EM breve")
 
     if message.content.startswith("!donators"):
         embed = discord.Embed(color=0xFFDF00, title="TOP DONATORS",
                               description="Lista dos doadores que nos ajudaram.")
         embed.set_thumbnail(url=message.server.icon_url)
-        embed.add_field(name="👑 - `@Miguel#0864`", value="100€", inline=False)
-        embed.add_field(name="2 - `@GOD sh0Xz*#2223`", value="40€", inline=False)
-        embed.add_field(name="3 - `@YvaneOficial#7966`", value="20€", inline=False)
-        embed.add_field(name="3 - `@TM#3356`", value="20€", inline=False)
-        embed.add_field(name="3 - `@Kelson#0984`", value="20€", inline=False)
-        embed.add_field(name="4 - `@Guga#3108`", value="10€", inline=False)
+        embed.add_field(name="👑 - `@`", value="0€", inline=False)
+        embed.add_field(name="2 - `@`", value="0€", inline=False)
+        embed.add_field(name="3 - `@`", value="0€", inline=False)
         embed.set_footer(
             icon_url="https://cdn.discordapp.com/avatars/385029583696691211/2b465b31ca58fb4cb9b853a2ab6b9406.png?size=128",
             text="rowk1337#8223")
@@ -171,15 +168,11 @@ async def on_message(message):
         embed = discord.Embed(color=0x00ff00, title="Staff do servidor.",
                               description="A Staff Do nosso servidor.\n\n"
                                           "__***Fundadores:***__\n"
-                                          "rowk1337 | Marques | Circ7_ | Sleepy\n\n"
-                                          "__***Co-Fundador:***__\n"
-                                          "20COMER | 🔥╲⎝⧹Morango⧸⎠╱🔥\n\n"
+                                          "Pedrodls13#0565 | ♕Savage♕#4168 | 𝙍𝙖𝙞𝙉.#9884\n\n"
                                           "__***Configuradores:***__\n"
-                                          "🔥╲⎝⧹Morango⧸⎠╱🔥 | devve | gamerpt_123 | Orb1x\n\n"
+                                          "rowkzao | RedcepP#8728\n\n"
                                           "__***Administradores:***__\n"
-                                          "sh0Xz | Stalker | Guga | pяx 🔥 | Major Pereira\n\n"
-                                          "__***Moderador:***__\n"
-                                          "AllHexN | GoKuBoy\n\n")
+                                          "KonigaN#5948 | leandroflorencio#5141 | rowk1337#8223 | \n\n"
         embed.set_thumbnail(url=message.server.icon_url)
         embed.set_footer(
             icon_url="https://cdn.discordapp.com/avatars/385029583696691211/2b465b31ca58fb4cb9b853a2ab6b9406.png?size=128",
@@ -313,16 +306,16 @@ async def on_message(message):
             description='\n'
         )
         embedbot.set_thumbnail(url=message.server.icon_url)  # Aqui você coloca a url da foto do seu bot!
-        embedbot.add_field(name='5€', value="500.000€ no servidor", inline=False)
-        embedbot.add_field(name='10€', value="1.000.000€ no servidor", inline=False)
-        embedbot.add_field(name='15€', value="1.500.000€ no servidor", inline=False)
-        embedbot.add_field(name='20€', value="3.000.000€ no servidor + 1 vehículo da concessionaria", inline=False)
-        embedbot.add_field(name='30€', value="5.500.000€ no servidor + 2 vehículos da concessionaria", inline=False)
+        embedbot.add_field(name='5€', value="350.000€ no servidor", inline=False)
+        embedbot.add_field(name='10€', value="800.000€ no servidor", inline=False)
+        embedbot.add_field(name='15€', value="1.400.000€ no servidor", inline=False)
+        embedbot.add_field(name='20€', value="2.500.000€ no servidor + 1 vehículo exclusivo", inline=False)
+        embedbot.add_field(name='30€', value="3.000.000€ no servidor + 1 vehículos exclusivo + uma casa a escolha", inline=False)
         embedbot.add_field(name='40€',
-                           value="7.000.000€ no servidor + 1 casa a escolha + 2 vehículos da concessionaria \n( ou 7.000.000€ + 1 carro exclusivo + uma casa )",
+                           value="4.200.000€ no servidor + 1 casa a escolha + 2 vehículos exclusivos + 1 casa a escolha", inline=False)",
                            inline=False)
         embedbot.add_field(name='50€',
-                           value="10.000.000€ no servidor + 2 vehículos da concessionaria + vehículo exclusivo + 2 casas",
+                           value="5.000.000€ no servidor + 2 vehículos exclusivos + 1 casa exclusiva",
                            inline=False)
         embedbot.add_field(name="\n\n Para mais informações:", value="Falar com um dos Fundadores!", inline=False)
         embedbot.set_footer(text="Next Generation RP",
@@ -337,9 +330,6 @@ async def on_message(message):
         embedbot.set_footer(text="Next Generation RP",
                             icon_url="https://cdn.discordapp.com/attachments/506224896691404820/508098898909462528/Logo.png")
         await client.send_message(message.channel, embed=embedbot)
-
-    if message.content.startswith(client.user.mention):
-        await client.send_message(message.channel, "Tavas melhor em baixo de água")
 
     if message.content.startswith('candidatar-me para mecanico'):
         Embed = discord.Embed(color=0xFFA500, description='**📬 Faça o formulario para mecanico no `privado`!**')
@@ -393,37 +383,6 @@ async def on_message(message):
 
         global msg_user
         msg_user = message.author
-
-    if message.content.lower().startswith("<@359020686439743498>"):
-        marques = "Vou ser sincero, nem me fales desse gajo é um fofinho do caraças!"
-        await client.send_message(message.channel, marques)
-
-    if message.content.lower().startswith("<@261820616766783488>"):
-        shox = "Esse gajo é um empresário do caralho se quiseres falar com ele tem de ser sobre negócios ou ele vai te ignorar!"
-        await client.send_message(message.channel, shox)
-
-
-    if message.content.lower().startswith("!ascii"):
-        await client.delete_message(message)
-        if not message.author.server_permissions.administrator:
-            await client.send_message(message.channel, "Você não tem permissão para executar este comando. :smile:")
-            return
-        try:
-            f = Figlet(font='big')
-            mensagem = message.content.lower().replace("!ascii", "")
-            texto = f.renderText(mensagem)
-            await client.send_message(message.channel, "```{}```".format(texto))
-        except:
-            pass
-
-    @client.event
-    async def on_reaction_add(reaction, user):
-        msg = reaction.message
-
-        if reaction.emoji == "✅" and msg.id == msg_id:  # and user == msg_user:
-            role = discord.utils.find(lambda r: r.name == "🔧 Mecanicos 🔧", msg.server.roles)
-            await client.add_roles(user, role)
-            print("add")
 
 
 #@client.event
